@@ -6,8 +6,21 @@ A branding and creative project.
 
 ```
 Micro-Branding/
-├── CLAUDE.md          # Claude Code configuration and guidance
-└── README.md          # This file
+├── assets/
+│   ├── logos/         # Logo files and variations
+│   ├── colors/        # Color palettes and swatches
+│   ├── typography/    # Font files and typography assets
+│   └── imagery/       # Brand photography and illustrations
+├── brand-guidelines/  # Brand identity documentation
+├── campaigns/         # Campaign materials and strategies
+├── creative-briefs/   # Project and creative briefs
+├── presentations/     # Pitch decks and presentations
+├── research/          # Market research and insights
+├── templates/         # Reusable templates
+├── docs/              # Project documentation
+├── CLAUDE.md          # Claude Code configuration
+├── README.md          # This file
+└── .gitignore         # Git ignore rules
 ```
 
 ## Getting Started

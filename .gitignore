@@ -1,0 +1,56 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Adobe
+*.tmp
+*.psd~
+*.ai~
+*.indd~
+
+# Design Files (large binaries - consider using Git LFS)
+# *.psd
+# *.ai
+# *.sketch
+# *.fig
+
+# Office temporary files
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+*.tmp
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if using any JS tools)
+node_modules/
+
+# Python (if using any Python tools)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Temp files
+temp/
+tmp/
+cache/
