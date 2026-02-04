@@ -74,6 +74,21 @@ Complete content planning framework (1,235 lines):
 - **Content Governance**: Roles, approval processes, tools
 - **Measurement & Optimization**: KPIs, reporting, A/B testing
 
+#### 6. **Campaign Strategy Template** (`templates/Campaign-Strategy-Template.md`)
+Comprehensive integrated campaign planning framework (1,068 lines):
+- **Strategic Foundation**: Business objectives, marketing goals, SMART campaign objectives
+- **Audience Strategy**: Deep-dive personas, segmentation, journey mapping (6 stages)
+- **Market Context**: Competitive analysis, category insights, consumer insights
+- **Creative Platform**: Big idea development, evaluation criteria, key messages
+- **Channel & Media Strategy**: Full-funnel strategy, channel selection, media mix, budget allocation
+- **Campaign Architecture**: Hero/hub/hygiene framework, amplification (influencer, PR, partnerships)
+- **Content Strategy**: Content pillars, mix by format, production planning
+- **Go-to-Market Plan**: 5-phase launch (pre-launch, launch, sustain, optimize, extend)
+- **Measurement Framework**: KPI hierarchy, attribution models, testing plan, reporting cadence
+- **Budget & Resources**: Comprehensive budget breakdown, pacing, team roster
+- **Risk Management**: Risk matrix, mitigation strategies, crisis protocol
+- **Campaign Calendar**: Master timeline, seasonal planning, week-by-week execution
+
 ---
 
 ## 📁 Project Structure
@@ -106,7 +121,8 @@ Micro-Branding/
 │   ├── Brand-Strategy-Template.md
 │   ├── Creative-Brief-Template.md
 │   ├── Pitch-Deck-Template.md
-│   └── Content-Strategy-Template.md
+│   ├── Content-Strategy-Template.md
+│   └── Campaign-Strategy-Template.md
 │
 ├── docs/                   # Project documentation
 │   └── [Documentation files]
@@ -124,7 +140,8 @@ Micro-Branding/
 
 1. **Choose the right template** for your project type:
    - Building a brand? → `Brand-Strategy-Template.md`
-   - Planning a campaign? → `Creative-Brief-Template.md`
+   - Planning a campaign? → `Campaign-Strategy-Template.md`
+   - Briefing creative work? → `Creative-Brief-Template.md`
    - Pitching to clients? → `Pitch-Deck-Template.md`
    - Planning content? → `Content-Strategy-Template.md`
 
@@ -148,10 +165,10 @@ This project is optimized for use with Claude Code. The `CLAUDE.md` file provide
 
 **Available Skills**:
 - `brand-strategy`: Brand positioning, architecture, identity systems
+- `campaign-strategy`: Integrated campaign planning and go-to-market
 - `creative-brief`: Campaign and project brief writing
 - `pitch-deck`: Presentation structure and content
 - `content-strategy`: Content planning and editorial calendars
-- `campaign-strategy`: Integrated campaign planning
 - `competitive-analysis`: Market analysis and positioning
 - `consumer-insights`: Audience personas and research
 - `design-direction`: Creative direction and visual strategy
@@ -174,6 +191,25 @@ This project is optimized for use with Claude Code. The `CLAUDE.md` file provide
 - Competitive analysis tools
 - Brand architecture models
 - Measurement frameworks
+
+---
+
+### Campaign Strategy Template
+**When to use**: Planning integrated marketing campaigns from strategy through execution
+**Sections**: 13 comprehensive sections with 100+ subsections
+**Time to complete**: 2-4 weeks for full campaign strategy
+**Output**: Complete campaign plan with go-to-market roadmap
+
+**Key Features**:
+- Strategic foundation with objectives hierarchy
+- Deep audience strategy and journey mapping
+- Creative platform and big idea evaluation
+- Full-funnel channel and media strategy
+- 5-phase go-to-market plan
+- Comprehensive measurement framework
+- Budget breakdown and resource planning
+- Risk management and crisis protocols
+- Campaign calendar with seasonal planning
 
 ---
 
@@ -228,14 +264,16 @@ This project is optimized for use with Claude Code. The `CLAUDE.md` file provide
 ### For Agencies
 - **New Business Pitches**: Use pitch deck and creative brief templates
 - **Client Onboarding**: Brand strategy template for discovery
-- **Campaign Planning**: Content and campaign strategy frameworks
+- **Campaign Planning**: Campaign strategy and content strategy frameworks
+- **Integrated Campaigns**: Full campaign strategy with media planning
 - **Credentials Decks**: Capabilities presentation structure
 
 ### For In-House Teams
 - **Brand Development**: Build or refine brand with strategy templates
+- **Campaign Planning**: Integrated campaign strategy and execution
 - **Content Planning**: Editorial calendars and social strategies
 - **Internal Alignment**: Strategy presentations and briefs
-- **Campaign Execution**: Brief templates for creative work
+- **Launch Planning**: Go-to-market frameworks and phasing
 
 ### For Consultants
 - **Client Deliverables**: Professional frameworks and templates
@@ -245,7 +283,8 @@ This project is optimized for use with Claude Code. The `CLAUDE.md` file provide
 
 ### For Startups
 - **Brand Foundation**: Build brand from scratch with strategy template
-- **Go-to-Market**: Content and campaign planning
+- **Go-to-Market**: Campaign strategy with launch planning
+- **Growth Campaigns**: Integrated marketing campaigns
 - **Investor Pitches**: Pitch deck structures (adapt for investor focus)
 - **Team Alignment**: Internal strategy presentations
 
@@ -261,6 +300,7 @@ The `brand-guidelines/` folder contains:
 ### Templates
 The `templates/` folder contains all reusable templates:
 - Brand Strategy Template
+- Campaign Strategy Template
 - Creative Brief Template
 - Pitch Deck Template
 - Content Strategy Template
@@ -420,10 +460,12 @@ This project is provided as-is for use in branding and creative work.
 - Creative Brief Template (814 lines)
 - Pitch Deck Template (916 lines)
 - Content Strategy Template (1,235 lines)
+- Campaign Strategy Template (1,068 lines)
 - Project structure and organization
 - Claude Code integration
+- Comprehensive README (459 lines)
 
-**Total**: 3,724 lines of professional templates and frameworks
+**Total**: 5,251 lines of professional templates and frameworks
 
 ---
 
@@ -436,6 +478,7 @@ Starting a new branding project? Follow this checklist:
 - [ ] Copy the Brand Strategy Template for your project
 - [ ] Complete discovery and research
 - [ ] Define brand positioning and identity
+- [ ] Plan campaigns with Campaign Strategy Template
 - [ ] Create creative briefs for campaigns or projects
 - [ ] Develop content strategy and editorial calendar
 - [ ] Build pitch deck or presentation
