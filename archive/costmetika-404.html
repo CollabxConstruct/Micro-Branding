@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — COSTMETIKA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+    
+    :root {
+      --ctk-void: #000000;
+      --ctk-bone: #F5F2EB;
+      --ctk-blush: #C9908C;
+      --ctk-blush-active: #B58078;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    @font-face {
+      font-family: 'Monument Extended';
+      src: local('Monument Extended');
+      font-weight: 400 900;
+    }
+    
+    body {
+      font-family: 'Space Mono', monospace;
+      background: var(--ctk-void);
+      color: var(--ctk-bone);
+      min-height: 100vh;
+      overflow: hidden;
+      cursor: crosshair;
+    }
+    
+    /* Scanline overlay */
+    .scanlines {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1000;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.15) 2px,
+        rgba(0, 0, 0, 0.15) 4px
+      );
+    }
+    
+    /* Grain texture */
+    .grain {
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.4;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      animation: grain 0.5s steps(10) infinite;
+    }
+    
+    @keyframes grain {
+      0%, 100% { transform: translate(0, 0); }
+      10% { transform: translate(-5%, -10%); }
+      20% { transform: translate(-15%, 5%); }
+      30% { transform: translate(7%, -25%); }
+      40% { transform: translate(-5%, 25%); }
+      50% { transform: translate(-15%, 10%); }
+      60% { transform: translate(15%, 0%); }
+      70% { transform: translate(0%, 15%); }
+      80% { transform: translate(3%, 35%); }
+      90% { transform: translate(-10%, 10%); }
+    }
+    
+    .container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+      z-index: 1;
+    }
+    
+    /* Giant 404 */
+    .error-code {
+      font-family: 'Monument Extended', 'Arial Black', sans-serif;
+      font-size: clamp(8rem, 25vw, 20rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 0.85;
+      color: var(--ctk-bone);
+      position: relative;
+      user-select: none;
+      mix-blend-mode: difference;
+    }
+    
+    .error-code::before {
+      content: '404';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      color: var(--ctk-blush);
+      z-index: -1;
+      opacity: 0.6;
+    }
+    
+    .error-code span {
+      display: inline-block;
+      transition: transform 0.1s ease-out;
+    }
+    
+    .error-code span:hover {
+      transform: translateY(-10px) rotate(-2deg);
+      color: var(--ctk-blush);
+    }
+    
+    /* Message block */
+    .message-block {
+      margin-top: 3rem;
+      padding: 1.5rem 2rem;
+      border: 2px solid var(--ctk-bone);
+      background: transparent;
+      max-width: 500px;
+      text-align: center;
+    }
+    
+    .message-block h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--ctk-blush);
+      margin-bottom: 1rem;
+    }
+    
+    .message-block p {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--ctk-bone);
+      opacity: 0.8;
+    }
+    
+    /* CTA Button */
+    .cta {
+      display: inline-block;
+      margin-top: 2.5rem;
+      padding: 1rem 2.5rem;
+      background: var(--ctk-blush);
+      color: var(--ctk-void);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.15s ease;
+    }
+    
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid var(--ctk-bone);
+      z-index: -1;
+      transition: all 0.15s ease;
+    }
+    
+    .cta:hover {
+      background: var(--ctk-blush-active);
+      transform: translate(2px, 2px);
+    }
+    
+    .cta:hover::before {
+      transform: translate(-2px, -2px);
+    }
+    
+    /* Brand mark */
+    .brand {
+      position: fixed;
+      top: 2rem;
+      left: 2rem;
+      font-family: 'Monument Extended', 'Arial Black', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 900;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ctk-bone);
+      z-index: 100;
+    }
+    
+    /* Coordinates */
+    .coords {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ctk-bone);
+      opacity: 0.4;
+      z-index: 100;
+    }
+    
+    /* Decorative grid lines */
+    .grid-line {
+      position: fixed;
+      background: var(--ctk-bone);
+      opacity: 0.08;
+      z-index: 0;
+    }
+    
+    .grid-line.horizontal {
+      width: 100%;
+      height: 1px;
+      left: 0;
+    }
+    
+    .grid-line.vertical {
+      width: 1px;
+      height: 100%;
+      top: 0;
+    }
+    
+    .grid-line:nth-child(1) { top: 20%; }
+    .grid-line:nth-child(2) { top: 80%; }
+    .grid-line:nth-child(3) { left: 15%; }
+    .grid-line:nth-child(4) { left: 85%; }
+    
+    /* Glitch effect on hover */
+    .glitch-wrapper {
+      position: relative;
+    }
+    
+    .glitch-wrapper:hover .error-code {
+      animation: glitch 0.3s infinite;
+    }
+    
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-3px, 3px); }
+      40% { transform: translate(-3px, -3px); }
+      60% { transform: translate(3px, 3px); }
+      80% { transform: translate(3px, -3px); }
+      100% { transform: translate(0); }
+    }
+    
+    /* Status indicator */
+    .status {
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 100;
+    }
+    
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--ctk-blush);
+      animation: pulse 2s infinite;
+    }
+    
+    .status-text {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ctk-bone);
+      opacity: 0.6;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    
+    /* Halftone corner accent */
+    .halftone {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(var(--ctk-blush) 1px, transparent 1px);
+      background-size: 8px 8px;
+      opacity: 0.15;
+      z-index: 0;
+      clip-path: polygon(0 100%, 0 0, 100% 100%);
+    }
+    
+    /* Mouse follower */
+    .cursor-follow {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--ctk-blush);
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform 0.1s ease-out;
+      mix-blend-mode: difference;
+    }
+  </style>
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="grain"></div>
+  <div class="cursor-follow" id="cursor"></div>
+  
+  <!-- Grid lines -->
+  <div class="grid-line horizontal"></div>
+  <div class="grid-line horizontal"></div>
+  <div class="grid-line vertical"></div>
+  <div class="grid-line vertical"></div>
+  
+  <!-- Halftone accent -->
+  <div class="halftone"></div>
+  
+  <!-- Brand -->
+  <div class="brand">COSTMETIKA</div>
+  
+  <!-- Status -->
+  <div class="status">
+    <div class="status-dot"></div>
+    <span class="status-text">Page Not Found</span>
+  </div>
+  
+  <div class="container">
+    <div class="glitch-wrapper">
+      <div class="error-code">
+        <span>4</span><span>0</span><span>4</span>
+      </div>
+    </div>
+    
+    <div class="message-block">
+      <h2>System Error</h2>
+      <p>The page you're looking for has been discontinued, moved, or never existed. Beauty is temporary. This URL is permanent proof.</p>
+    </div>
+    
+    <a href="/" class="cta">Return to Shop</a>
+  </div>
+  
+  <!-- Coordinates -->
+  <div class="coords">
+    <span id="mouse-pos">X: 0000 / Y: 0000</span>
+  </div>
+  
+  <script>
+    // Cursor follower
+    const cursor = document.getElementById('cursor');
+    const coords = document.getElementById('mouse-pos');
+    
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX - 10 + 'px';
+      cursor.style.top = e.clientY - 10 + 'px';
+      
+      const x = String(e.clientX).padStart(4, '0');
+      const y = String(e.clientY).padStart(4, '0');
+      coords.textContent = `X: ${x} / Y: ${y}`;
+    });
+    
+    // Interactive letters
+    const letters = document.querySelectorAll('.error-code span');
+    letters.forEach((letter, i) => {
+      letter.addEventListener('mouseover', () => {
+        letter.style.transform = `translateY(-${10 + Math.random() * 20}px) rotate(${-5 + Math.random() * 10}deg)`;
+      });
+      letter.addEventListener('mouseout', () => {
+        letter.style.transform = 'translateY(0) rotate(0)';
+      });
+    });
+  </script>
+</body>
+</html>

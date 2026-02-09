@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   COSTMETIKA Brand Design Tokens
+   Anti-luxury Beauty Marketplace
+   ═══════════════════════════════════════════ */
+
+:root {
+  /* ─── Core Palette ─── */
+  --csm-void:       #000000;  /* Primary Dark */
+  --csm-near-black: #1A1A1A;  /* Body Text */
+  --csm-bone:       #F5F2EB;  /* Primary Light */
+  --csm-bg-warm:    #E8E4DD;  /* Warm Background */
+  --csm-blush:      #C9908C;  /* Primary Accent */
+  --csm-blush-glow: #E5B5B1;  /* Glow / Hover */
+
+  /* ─── Typography ─── */
+  --csm-font-display: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --csm-font-system:  'Space Mono', 'SF Mono', 'Fira Code', monospace;
+
+  /* ─── Font Weights ─── */
+  --csm-weight-regular: 400;
+  --csm-weight-bold:    700;
+  --csm-weight-black:   900;
+
+  /* ─── Font Sizes ─── */
+  --csm-text-xs:   0.625rem;  /* 10px - Footer, coords */
+  --csm-text-sm:   0.7rem;    /* 11.2px - Labels, badges */
+  --csm-text-base: 0.875rem;  /* 14px - Body text */
+  --csm-text-lg:   1.25rem;   /* 20px - Card titles */
+  --csm-text-xl:   clamp(2rem, 5vw, 4rem);   /* Section titles */
+  --csm-text-hero: clamp(3rem, 12vw, 8rem);  /* Hero display */
+  --csm-text-stat: 3.5rem;    /* 56px - Statistics */
+
+  /* ─── Letter Spacing ─── */
+  --csm-tracking-tight:  -0.05em;  /* Hero titles */
+  --csm-tracking-normal: -0.02em;  /* Card titles */
+  --csm-tracking-wide:    0.1em;   /* Status text */
+  --csm-tracking-wider:   0.15em;  /* Badges */
+  --csm-tracking-widest:  0.2em;   /* Labels */
+  --csm-tracking-brand:   0.25em;  /* Brand name */
+
+  /* ─── Texture & Effects ─── */
+  --csm-grain-opacity: 0.15;
+  --csm-glass-bg: rgba(245, 242, 235, 0.3);
+  --csm-glass-blur: blur(10px);
+  --csm-orb-opacity: 0.2;
+  --csm-orb-blur: blur(40px);
+}

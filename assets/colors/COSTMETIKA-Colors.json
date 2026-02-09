@@ -1,0 +1,91 @@
+{
+  "brand": "COSTMETIKA",
+  "version": "1.0",
+  "description": "Anti-luxury beauty marketplace brand colors",
+  "palette": {
+    "VOID": {
+      "hex": "#000000",
+      "rgb": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+      },
+      "role": "Primary Dark / Text on Light"
+    },
+    "NEAR-BLACK": {
+      "hex": "#1A1A1A",
+      "rgb": {
+        "r": 26,
+        "g": 26,
+        "b": 26
+      },
+      "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 10
+      },
+      "role": "Body Text / Soft Dark"
+    },
+    "BONE": {
+      "hex": "#F5F2EB",
+      "rgb": {
+        "r": 245,
+        "g": 242,
+        "b": 235
+      },
+      "hsl": {
+        "h": 42,
+        "s": 33,
+        "l": 94
+      },
+      "role": "Primary Light / Backgrounds"
+    },
+    "BG-WARM": {
+      "hex": "#E8E4DD",
+      "rgb": {
+        "r": 232,
+        "g": 228,
+        "b": 221
+      },
+      "hsl": {
+        "h": 38,
+        "s": 19,
+        "l": 89
+      },
+      "role": "Secondary Background / Warm Base"
+    },
+    "BLUSH": {
+      "hex": "#C9908C",
+      "rgb": {
+        "r": 201,
+        "g": 144,
+        "b": 140
+      },
+      "hsl": {
+        "h": 4,
+        "s": 36,
+        "l": 67
+      },
+      "role": "Primary Accent / CTA / Highlights"
+    },
+    "BLUSH-GLOW": {
+      "hex": "#E5B5B1",
+      "rgb": {
+        "r": 229,
+        "g": 181,
+        "b": 177
+      },
+      "hsl": {
+        "h": 5,
+        "s": 50,
+        "l": 80
+      },
+      "role": "Glow / Hover States / Soft Accent"
+    }
+  }
+}

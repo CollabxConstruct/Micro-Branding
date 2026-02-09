@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 100" width="600" height="100">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@900&amp;display=swap');
+    </style>
+  </defs>
+  <rect width="600" height="100" fill="none"/>
+  <text x="300" y="72" font-family="'DM Sans', sans-serif" font-weight="900" font-size="64" fill="#1a1a1a" text-anchor="middle" letter-spacing="8">COSTMETIKA</text>
+  <!-- Diagonal strikethrough accent -->
+  <line x1="45" y1="80" x2="555" y2="20" stroke="#C9908C" stroke-width="3" opacity="0.6"/>
+</svg>
