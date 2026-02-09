@@ -89,6 +89,17 @@ Comprehensive integrated campaign planning framework (1,068 lines):
 - **Risk Management**: Risk matrix, mitigation strategies, crisis protocol
 - **Campaign Calendar**: Master timeline, seasonal planning, week-by-week execution
 
+#### 7. **Business Proposal Template** (`templates/Business-Proposal-Template.md`)
+Complete proposal and contract framework (1,309 lines):
+- **Client Proposal/SOW**: 9-section proposal with scope, timeline, team, investment, terms, signature page
+- **Retainer Proposal**: Ongoing engagement structure with hours, services, flexibility, terms
+- **RFP Response**: 10-section formal response with compliance checklist, solution, experience, references
+- **Project Proposal (Internal)**: Internal approval with business case, resources, risks, metrics
+- **Partnership Proposal**: Collaboration framework with model, GTM, terms, success metrics
+- **Pricing Guidelines**: 5 pricing models (fixed, retainer, T&M, value-based, hybrid) with best practices
+- **Scope Management**: Clear scope definition, deliverable examples, change order process
+- **Terms & Conditions**: Standard and optional clauses (payment, IP, revisions, confidentiality, termination)
+
 ---
 
 ## 📁 Project Structure
@@ -122,7 +133,8 @@ Micro-Branding/
 │   ├── Creative-Brief-Template.md
 │   ├── Pitch-Deck-Template.md
 │   ├── Content-Strategy-Template.md
-│   └── Campaign-Strategy-Template.md
+│   ├── Campaign-Strategy-Template.md
+│   └── Business-Proposal-Template.md
 │
 ├── docs/                   # Project documentation
 │   └── [Documentation files]
@@ -144,6 +156,7 @@ Micro-Branding/
    - Briefing creative work? → `Creative-Brief-Template.md`
    - Pitching to clients? → `Pitch-Deck-Template.md`
    - Planning content? → `Content-Strategy-Template.md`
+   - Writing proposals? → `Business-Proposal-Template.md`
 
 2. **Copy the template** to the appropriate folder:
    - Brand strategies → `brand-guidelines/`
@@ -213,6 +226,24 @@ This project is optimized for use with Claude Code. The `CLAUDE.md` file provide
 
 ---
 
+### Business Proposal Template
+**When to use**: Writing client proposals, SOWs, retainers, or RFP responses
+**Formats**: 5 different proposal types
+**Time to complete**: 4-8 hours per proposal
+**Output**: Professional, comprehensive proposals and contracts
+
+**Key Features**:
+- Client proposal/SOW (9-section structure)
+- Retainer proposal framework
+- RFP response template
+- Internal project proposal
+- Partnership proposal
+- 5 pricing models with guidance
+- Scope management and change orders
+- Terms and conditions templates
+
+---
+
 ### Creative Brief Template
 **When to use**: Briefing creative teams on campaigns, design, or content
 **Formats**: 5 different brief types
@@ -263,6 +294,8 @@ This project is optimized for use with Claude Code. The `CLAUDE.md` file provide
 
 ### For Agencies
 - **New Business Pitches**: Use pitch deck and creative brief templates
+- **Proposals & SOWs**: Business proposal template for client projects
+- **Retainer Agreements**: Retainer proposal framework
 - **Client Onboarding**: Brand strategy template for discovery
 - **Campaign Planning**: Campaign strategy and content strategy frameworks
 - **Integrated Campaigns**: Full campaign strategy with media planning
@@ -304,6 +337,7 @@ The `templates/` folder contains all reusable templates:
 - Creative Brief Template
 - Pitch Deck Template
 - Content Strategy Template
+- Business Proposal Template
 
 ### Project Folders
 Organize your work into project-specific folders:
