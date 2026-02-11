@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**COSTMETIKA Brand Presentation** - Professional motion graphics video compositions for the COSTMETIKA luxury beauty brand using Remotion.
+**COSTMETIKA Brand Presentation** - Professional motion graphics video compositions for the COSTMETIKA anti-luxury beauty brand using Remotion.
 
 **Tech Stack**: Remotion 4.0, React 18.2, TypeScript 5.0, @remotion/transitions
 
@@ -46,7 +46,7 @@ All compositions are registered in `src/Root.tsx` via the `RemotionRoot` compone
 
 - **ProfessionalV2.tsx** - Primary high-quality video with bone white aesthetic (#F0EAE1), pink accents (#FF5C8A), and professional spring-based animations
 - **FinalVideo.tsx** - Original brutalist design with black backgrounds and rotating geometric elements
-- **ProfessionalBrandVideo.tsx** - TransitionSeries-based version (experimental, has import issues)
+- **ProfessionalBrandVideo.tsx** - TransitionSeries-based version using `@remotion/transitions`
 
 ### Brand Design System
 
@@ -132,41 +132,8 @@ import { fade, slide } from "@remotion/transitions/fade";
 import { springTiming } from "@remotion/transitions/timings"; // timings not exported
 ```
 
-### Port Already in Use
+## Strategy References
 
-If port 3000 is occupied:
-```bash
-npm start -- --port=3001
-```
-
-Or kill the existing process:
-```bash
-lsof -ti:3000 | xargs kill -9
-```
-
-### Render Performance
-
-For faster renders:
-- Increase concurrency (max = CPU core count)
-- Reduce CRF value increases file size but may speed up encoding
-- Simplify spring animations (higher damping = less computation)
-
-## Animation Best Practices
-
-1. **Use springs for natural motion** - Avoid linear `interpolate` for position/scale
-2. **Stagger animations** - Don't animate everything simultaneously (5-10 frame delays)
-3. **Professional timing** - 4-6 seconds per major scene, 20-30 frames for text reveals
-4. **Easing curves** - Use Material Design bezier (0.4, 0.0, 0.2, 1) for smooth acceleration
-5. **Color restraint** - Pink as accent only (10-20% of screen), bone white dominates
-6. **Typography scale** - 100-150px for brand names, 30-50px for body text
-
-## Project Context
-
-This project is part of the larger COSTMETIKA brand system located at:
-- Brand Strategy: `~/Dev/Costmetika/COSTMETIKA-BRAND-STRATEGY.md`
-- Content Strategy: `~/Dev/Costmetika/COSTMETIKA-CONTENT-STRATEGY.md`
-- E-commerce Strategy: `~/Dev/Costmetika/COSTMETIKA-ECOMMERCE-STRATEGY.md`
-- Hydrogen Storefront: `~/Dev/Costmetika/` (Shopify Hydrogen with React Router 7)
-
-Parent directory CLAUDE.md: `~/Dev/Micro-Branding/CLAUDE.md`
-Global user settings: `~/.claude/CLAUDE.md`
+- `~/Dev/Costmetika/COSTMETIKA-BRAND-STRATEGY.md`
+- `~/Dev/Costmetika/COSTMETIKA-CONTENT-STRATEGY.md`
+- `~/Dev/Costmetika/COSTMETIKA-ECOMMERCE-STRATEGY.md`
